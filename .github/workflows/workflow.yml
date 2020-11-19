@@ -31,10 +31,31 @@ jobs:
     - name: Test
       run: coverage run --source=easys_ordermanager manage.py test
 
-    - name: Coverage
-      env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-      run: coveralls
+  coverage:
+    name: Publish coverage
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install -q Django==2.2.10
+          pip install .
+          pip install -r requirements-test.txt
+
+      - name: Run coverage
+        run: coverage run --source=easys_ordermanager manage.py test
+
+      - name: Publish coverage
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: coveralls
 
   publish:
     name: Build and publish Python 🐍 distributions 📦 to PyPI
