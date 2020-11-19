@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.23
+
+### v1/v2
+
+#### `AccountLocationSerializer`
+
+* Add validation: required `payment_debit_account_iban` in case of `payment_type` Charge 
+
 ## 1.4.12
 
 ### v2

@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.4.23 (2020-11-19)
+Updates to Serializer v1 & v2
+see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
+
 # 1.4.22 (2020-11-16)
 * Modernize Docker env, Update max supported versions and min requirements of some packages
 * Split package and test dependencies
