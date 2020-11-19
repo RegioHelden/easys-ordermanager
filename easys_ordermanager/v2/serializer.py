@@ -942,6 +942,11 @@ class AccountLocationSerializer(serializers.Serializer):
     """
     reference_customer = serializers.BooleanField(default=False)
 
+    def validate(self, data):
+        if data.get('payment_type') == PAYMENT_METHOD_CHARGE and not data.get('payment_debit_account_iban'):
+            raise serializers.ValidationError('payment_type Charge requires payment_debit_account_iban')
+        return data
+
 
 class OrderLineGoogleAdsBasicSerializer(serializers.Serializer):
     """
