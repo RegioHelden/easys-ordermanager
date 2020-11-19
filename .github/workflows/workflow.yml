@@ -29,7 +29,7 @@ jobs:
       run: flake8 easys_ordermanager
 
     - name: Test
-      run: coverage run --source=easys_ordermanager manage.py test
+      run: python manage.py test
 
   coverage:
     name: Publish coverage
