@@ -70,6 +70,7 @@ PRODUCT_TYPE_CUSTOMER_WEBSITE = 8
 PRODUCT_TYPE_EMAIL = 9
 PRODUCT_TYPE_CONVERSION_TRACKING = 10
 PRODUCT_TYPE_LANDINGPAGE = 11
+PRODUCT_TYPE_TONLINE = 12
 PRODUCT_TYPE_CHOICES = Choices(
     (PRODUCT_TYPE_GOOGLE_ADS, 'google_ads', _('Google Ads')),
     (PRODUCT_TYPE_DISPLAY, 'display', _('Display')),
@@ -82,6 +83,7 @@ PRODUCT_TYPE_CHOICES = Choices(
     (PRODUCT_TYPE_CUSTOMER_WEBSITE, 'customer_website', _('Customer website')),
     (PRODUCT_TYPE_EMAIL, 'email', _('Email')),
     (PRODUCT_TYPE_CONVERSION_TRACKING, 'conversion_tracking', _('Conversion tracking')),
+    (PRODUCT_TYPE_TONLINE, 'tonline', _('T-Online')),
 )
 
 PRODUCT_TYPE_ORDER_ATTRIBUTES_MAPPING = {
@@ -1670,6 +1672,19 @@ class OrderLineListingSerializer(serializers.Serializer):
     """
     keywords = serializers.ListField(child=serializers.CharField(max_length=55, required=True), allow_empty=True,
                                      required=True)
+
+    """
+    costs for t-online product
+    if this number not a 0 than will be created a t-online product on the same location
+
+    """
+    tonline_costs = serializers.DecimalField(decimal_places=2, max_digits=10, required=False)
+
+    """
+    city name for t-online product
+
+    """
+    tonline_city = serializers.CharField(max_length=100, required=False)
 
     def validate(self, data):
         self.validate_unique_opening_hours(data['opening_hours'])

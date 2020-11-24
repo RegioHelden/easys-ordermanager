@@ -1,5 +1,17 @@
 # Serializer changes
 
+## 1.4.24
+
+### v1/v2
+
+#### `OrderLineListingSerializer`
+
+* Add two new fields: `tonline_costs` and `tonline_city`
+
+### `PRODUCT_TYPE_CHOICES`
+
+* Add choice `PRODUCT_TYPE_TONLINE`
+
 ## 1.4.23
 
 ### v1/v2
