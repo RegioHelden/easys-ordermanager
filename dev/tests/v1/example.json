@@ -103,6 +103,7 @@
         "product_type": 1,
         "product_level": 2,
         "initial_term_months": 6,
+        "payment_cycle": 1,
         "detail_google_ads_premium": {
             "call_to_action": "Vote for the wall!",
             "campaign_goal": "Get approval for my wall",
@@ -141,6 +142,7 @@
         "product_type": 1,
         "product_level": 1,
         "initial_term_months": 6,
+        "payment_cycle": 3,
         "detail_google_ads_basic": {
             "campaign_goal": "Get approval for my wall",
             "regions": [
@@ -171,6 +173,7 @@
         "product_type": 2,
         "product_level": 1,
         "initial_term_months": 6,
+        "payment_cycle": 6,
         "detail_display_basic": {
             "impressions_per_month": 20000,
             "geo_targeting_zip": "70178",
@@ -207,6 +210,7 @@
         "product_type": 2,
         "product_level": 2,
         "initial_term_months": 6,
+        "payment_cycle": 12,
         "detail_display_premium": {
             "booking_type": 2,
             "target_devices": 1,

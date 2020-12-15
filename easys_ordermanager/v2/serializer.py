@@ -86,6 +86,17 @@ PRODUCT_TYPE_CHOICES = Choices(
     (PRODUCT_TYPE_TONLINE, 'tonline', _('T-Online')),
 )
 
+PRODUCT_PAYMENT_CYCLE_1 = 1
+PRODUCT_PAYMENT_CYCLE_3 = 3
+PRODUCT_PAYMENT_CYCLE_6 = 6
+PRODUCT_PAYMENT_CYCLE_12 = 12
+PRODUCT_PAYMENT_CYCLE_CHOICES = Choices(
+    (PRODUCT_PAYMENT_CYCLE_1, 'one_month', _('{value} month').format(value=1)),
+    (PRODUCT_PAYMENT_CYCLE_3, 'three_months', _('{value} months').format(value=3)),
+    (PRODUCT_PAYMENT_CYCLE_6, 'six_months', _('{value} months').format(value=6)),
+    (PRODUCT_PAYMENT_CYCLE_12, 'twelve_months', _('{value} months').format(value=12)),
+)
+
 PRODUCT_TYPE_ORDER_ATTRIBUTES_MAPPING = {
     PRODUCT_TYPE_GOOGLE_ADS: {'detail_google_ads_basic', 'detail_google_ads_premium'},
     PRODUCT_TYPE_DISPLAY: {'detail_display_basic', 'detail_display_premium'},
@@ -2138,6 +2149,11 @@ class OrderLineSerializer(serializers.Serializer):
                                                                                 comma_separated_period_validatior],
                                                       allow_blank=True,
                                                       required=False)
+
+    """
+    invoicing period of the product (in months) 
+    """
+    payment_cycle = serializers.ChoiceField(choices=PRODUCT_PAYMENT_CYCLE_CHOICES, required=False)
 
     """
     sub-serializer for google ads basic specific product data ("google_basic" product subtype)

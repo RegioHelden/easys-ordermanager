@@ -84,6 +84,17 @@ msgstr "E-Mail"
 msgid "Conversion tracking"
 msgstr "Conversion-Tracking"
 
+msgid "T-Online"
+msgstr "T-Online"
+
+#, python-brace-format
+msgid "{value} month"
+msgstr "{value} Monat"
+
+#, python-brace-format
+msgid "{value} months"
+msgstr "{value} Monate"
+
 msgid "Customer provided"
 msgstr "Vom Kunde gestellt"
 

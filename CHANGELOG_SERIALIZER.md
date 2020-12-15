@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.25
+
+### v1/v2
+
+#### `OrderLineSerializer`
+
+* Add new field: `payment_cycle`: choice of `PRODUCT_PAYMENT_CYCLE_CHOICES`, optional
+
 ## 1.4.24
 
 ### v1/v2
