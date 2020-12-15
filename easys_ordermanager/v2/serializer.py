@@ -2151,7 +2151,7 @@ class OrderLineSerializer(serializers.Serializer):
                                                       required=False)
 
     """
-    invoicing period of the product (in months) 
+    invoicing period of the product (in months)
     """
     payment_cycle = serializers.ChoiceField(choices=PRODUCT_PAYMENT_CYCLE_CHOICES, required=False)
 
