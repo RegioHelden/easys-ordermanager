@@ -82,10 +82,10 @@ PRODUCT_PAYMENT_CYCLE_3 = 3
 PRODUCT_PAYMENT_CYCLE_6 = 6
 PRODUCT_PAYMENT_CYCLE_12 = 12
 PRODUCT_PAYMENT_CYCLE_CHOICES = Choices(
-    (PRODUCT_PAYMENT_CYCLE_1, 'one_month', _('{value} month').format(value=1)),
-    (PRODUCT_PAYMENT_CYCLE_3, 'three_months', _('{value} months').format(value=3)),
-    (PRODUCT_PAYMENT_CYCLE_6, 'six_months', _('{value} months').format(value=6)),
-    (PRODUCT_PAYMENT_CYCLE_12, 'twelve_months', _('{value} months').format(value=12)),
+    (PRODUCT_PAYMENT_CYCLE_1, 'one_month', _('Monthly')),
+    (PRODUCT_PAYMENT_CYCLE_3, 'three_months', _('Quarterly')),
+    (PRODUCT_PAYMENT_CYCLE_6, 'six_months', _('Biyearly')),
+    (PRODUCT_PAYMENT_CYCLE_12, 'twelve_months', _('Yearly')),
 )
 
 CREATIVE_OPTION_CUSTOMER = 1

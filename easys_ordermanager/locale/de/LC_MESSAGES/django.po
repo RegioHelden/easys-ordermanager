@@ -87,13 +87,17 @@ msgstr "Conversion-Tracking"
 msgid "T-Online"
 msgstr "T-Online"
 
-#, python-brace-format
-msgid "{value} month"
-msgstr "{value} Monat"
+msgid "Monthly"
+msgstr "Monatlich"
 
-#, python-brace-format
-msgid "{value} months"
-msgstr "{value} Monate"
+msgid "Quarterly"
+msgstr "Quartalsweise"
+
+msgid "Biyearly"
+msgstr "Halbjährlich"
+
+msgid "Yearly"
+msgstr "Jährlich"
 
 msgid "Customer provided"
 msgstr "Vom Kunde gestellt"

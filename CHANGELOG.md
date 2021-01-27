@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.27 (2021-1-27)
+Updated translations of PRODUCT_PAYMENT_CYCLE_CHOICES
+
 # 1.4.26 (2021-1-27)
 updates changelog
 
