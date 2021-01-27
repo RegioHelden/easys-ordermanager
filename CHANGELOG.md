@@ -1,6 +1,6 @@
 # Changelog
 
-# 1.4.25 (not released yet)
+# 1.4.25 (2021-1-27)
 Adds product payment cycle support to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
 
