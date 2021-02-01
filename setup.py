@@ -30,8 +30,7 @@ setup(
     long_description_content_type='text/markdown',
     install_requires=[
         'django>=2.2,<4.0',
-        'django-countries>=6.0,<7.0',
-        'django-iban>=0.3.1,<0.4',
+        'django-countries>=6.0,<8.0',
         'django-internationalflavor>=0.4.0,<0.5.0',
         'django-model-utils>=3.1.2,<5.0.0',
         'django-phonenumber-field>=3.0.1,<5.1',

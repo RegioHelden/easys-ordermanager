@@ -1,5 +1,10 @@
 # Changelog
 
+# 1.4.28 (2021-02-01)
+* Remove dependency to django-iban and use validation from internationalflavor
+* Allow django-countries release series 7.x
+* Update dev requirements
+
 # 1.4.27 (2021-1-27)
 Updated translations of PRODUCT_PAYMENT_CYCLE_CHOICES
 
