@@ -527,7 +527,6 @@ INAPP_AUDIENCE_FAMILIENVATER = 38
 INAPP_AUDIENCE_BEST_AGER = 39
 INAPP_AUDIENCE_BOSSHOME = 40
 INAPP_AUDIENCE_HOBBYKOCHE = 41
-INAPP_AUDIENCE_SONSTIGE = 42
 INAPP_AUDIENCE_CHOICES = Choices(
     (INAPP_AUDIENCE_GEBRAUCHTWAGEN_INTERESSENTEN, 'gebrauchtwagen_interessenten', _('Interested in used cars')),
     (INAPP_AUDIENCE_B2B_AUTOMOTIVE, 'b2b_automotive', _('B2B Automotive')),
@@ -573,7 +572,6 @@ INAPP_AUDIENCE_CHOICES = Choices(
     (INAPP_AUDIENCE_BEST_AGER, 'best_ager', _('Best ager')),
     (INAPP_AUDIENCE_BOSSHOME, 'bosshome', _('Boss@Home')),
     (INAPP_AUDIENCE_HOBBYKOCHE, 'hobbykoche', _('Amateur chefs')),
-    (INAPP_AUDIENCE_SONSTIGE, 'sonstige', _('Misc')),
 )
 
 
@@ -1529,7 +1527,7 @@ class OrderLineInAppSerializer(serializers.Serializer):
     description of the audience the ad should be targeted on
 
     """
-    target_audiences = serializers.MultipleChoiceField(choices=INAPP_AUDIENCE_CHOICES, required=True, allow_blank=True)
+    target_audiences = serializers.MultipleChoiceField(choices=INAPP_AUDIENCE_CHOICES, required=False, allow_blank=True)
 
     """
     textual representation of target audience requirements that are not represented by
@@ -1574,6 +1572,11 @@ class OrderLineInAppSerializer(serializers.Serializer):
 
     """
     ticket_id = serializers.CharField(max_length=20, required=True)
+
+    def validate(self, data):
+        if not data.get('target_audiences') and not data.get('other_target_audiences'):
+            raise serializers.ValidationError('target_audiences or other_target_audiences has to be set')
+        return data
 
 
 class OrderLineListingOpeningHoursSerializer(serializers.Serializer):
