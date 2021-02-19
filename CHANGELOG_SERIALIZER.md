@@ -1,5 +1,14 @@
 # Serializer changes
 
+## 1.4.29
+
+### v1/v2
+
+#### `OrderLineInAppSerializer`
+
+* Remove INAPP_AUDIENCE_OTHER choice
+* Make `target_audiences` optional. One of the `target_audiences` and `other_target_audiences` is required
+
 ## 1.4.25
 
 ### v1/v2
