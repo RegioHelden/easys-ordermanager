@@ -7,7 +7,7 @@
 
 Tested against
 - Python: [3.6, 3.7, 3.8, 3.9]
-- Django: [2.2.19, 3.0.13, 3.1.8]
+- Django: [2.2.19, 3.0.13, 3.1.7]
 - Django Rest Framework: [3.9.4, 3.10.3, 3.11.2, 3.12.2]
 
 See .github/workflows/workflow.yml for more details
