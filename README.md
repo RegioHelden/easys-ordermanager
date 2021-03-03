@@ -5,7 +5,9 @@
 
 # EasyS order manager API
 
-Compatible with
-- Django Rest Framework: 3.8, 3.9, 3.10, 3.11
-- Django: 1.11, 2.2 (Not yet for 3.x)
-- Python: 3.6, 3.7, 3.8
+Tested against
+- Python: [3.6, 3.7, 3.8, 3.9]
+- Django: [2.2.19, 3.0.13, 3.1.8]
+- Django Rest Framework: [3.9.4, 3.10.3, 3.11.2, 3.12.2]
+
+See .github/workflows/workflow.yml for more details
