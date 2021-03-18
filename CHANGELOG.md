@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.30 (2021-03-18)
+Replace ugettext* usages with gettext* usages as Python 3 is unicode compatible anyway
+
 # 1.4.29 (2021-02-19)
 Updates to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)

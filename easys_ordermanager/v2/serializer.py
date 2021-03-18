@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 from django.core.validators import validate_comma_separated_integer_list
-from django.utils.translation import ugettext_lazy as _, pgettext_lazy
+from django.utils.translation import gettext_lazy as _, pgettext_lazy
 from django_countries.serializer_fields import CountryField
 from internationalflavor.iban import IBANValidator
 from internationalflavor.vat_number import VATNumberValidator
