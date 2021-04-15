@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.4.31 (2021-04-15)
+* Update maximum supported version of django-phonenumber-field>=3.0.1,<5.2
+* Update test matrix, add Django 3.2
+
 # 1.4.30 (2021-03-18)
 Replace ugettext* usages with gettext* usages as Python 3 is unicode compatible anyway
 
