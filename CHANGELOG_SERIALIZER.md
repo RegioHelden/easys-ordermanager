@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.32
+
+### v1/v2
+
+#### `OrderLineSeoSerializer`
+
+* Make `regions` optional.
+
 ## 1.4.29
 
 ### v1/v2

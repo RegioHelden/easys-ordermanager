@@ -1664,7 +1664,7 @@ class OrderLineSeoSerializer(serializers.Serializer):
     regions to optimize for
 
     """
-    regions = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=True)
+    regions = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=False)
 
     """
     main focus of the seo optimization, which of the customers products/services is the most important?
