@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.33
+
+### v1/v2
+
+#### `ContactSerializer`
+
+* Add new field `opt_in_marketing`, optional.
+
 ## 1.4.32
 
 ### v1/v2
