@@ -727,6 +727,13 @@ class ContactSerializer(serializers.Serializer):
     opt_in_evaluations = serializers.BooleanField(required=True)
 
     """
+    will this contact receive information about new products, services and special offers?
+
+    """
+
+    opt_in_marketing = serializers.BooleanField(required=False)
+
+    """
     is this contact allowed to access the customer area and product statistics?
 
     """

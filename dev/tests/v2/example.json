@@ -65,6 +65,7 @@
         "opt_in_contact_form": true,
         "opt_in_info": true,
         "opt_in_evaluations": true,
+        "opt_in_marketing": true,
         "is_allowed_statistics": true
     }],
     "orders": [{
