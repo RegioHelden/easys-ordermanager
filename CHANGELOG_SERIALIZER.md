@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.34
+
+### v1/v2
+
+#### `OrderLineSeoSerializer`
+
+* Make `ticket_id` optional.
+
 ## 1.4.33
 
 ### v1/v2

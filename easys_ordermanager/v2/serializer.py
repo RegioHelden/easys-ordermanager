@@ -1800,7 +1800,7 @@ class OrderLineSeoSerializer(serializers.Serializer):
     redmine ticket id of the original seo offer inquiry
 
     """
-    ticket_id = serializers.CharField(max_length=20, required=True)
+    ticket_id = serializers.CharField(max_length=20, required=False)
 
 
 class OrderLineLandingpageSerializer(serializers.Serializer):
