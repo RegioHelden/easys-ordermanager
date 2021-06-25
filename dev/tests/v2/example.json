@@ -131,7 +131,11 @@
             "target_page_type": 3,
             "usp": "Best wall you've ever seen",
             "expected_impressions": 1000,
-            "expected_impression_share": 48.92
+            "expected_impression_share": 48.92,
+            "is_generic_campaign": true,
+            "generic_topics": [
+                "Building area", "Construction"
+            ]
         }
     },{
         "easys_id": 982931,
