@@ -1128,6 +1128,14 @@ class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
     the expected impressions when the campaign budget is initially calculated
     """
     expected_impressions = serializers.CharField(max_length=50, allow_blank=True, required=False)
+    """
+    indicates if the campaign is generic
+    """
+    is_generic_campaign = serializers.BooleanField(required=False)
+    """
+    the topics related of the generic campaign
+    """
+    generic_topics = serializers.ListField(child=serializers.CharField(max_length=250), required=False)
 
     def validate(self, data):
         if data.get('include_remarketing') and data.get('remarketing_setup_fee') is None:

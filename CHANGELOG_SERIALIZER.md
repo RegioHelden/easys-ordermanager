@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.36
+
+### v1/v2
+
+#### `OrderLineGoogleAdsPremiumSerializer`
+
+* Add new fields for generic campaign information: `is_generic_campaign` and `generic_topics`, optionals.
+
 ## 1.4.34
 
 ### v1/v2

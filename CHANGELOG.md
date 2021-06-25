@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.4.36 (2021-06-25)
+Updates to Serializer v1 & v2
+see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
+
 # 1.4.35 (2021-06-01)
 * Update maximum supported version of django-phonenumber-field>=3.0.1,<6.0
 
