@@ -1,5 +1,14 @@
 # Serializer changes
 
+## 1.4.37
+
+### v1/v2
+
+#### `OrderLineEmailSerializer`
+
+* Add necessary and additional fields for domain creation on email orderline: `desired_domain`, `domain_type` and `domain_info`.
+
+
 ## 1.4.36
 
 ### v1/v2

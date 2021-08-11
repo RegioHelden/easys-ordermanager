@@ -1958,6 +1958,27 @@ class OrderLineEmailSerializer(serializers.Serializer):
     """
 
     """
+    customer desired domain name
+
+    """
+    desired_domain = serializers.CharField(max_length=100, validators=[DomainNameValidator()], required=False)
+
+    """
+    how should the desired_domain be connected to the website product
+    this can either be by registering a new domain, transferring and existing one or using an external domain
+
+    HC: DOMAIN_TYPE_TRANSFER -> ProductDomain.domain_transfer true
+        ProductDomain.provider to ProductDomain.PROVIDER_CHOICES.external
+    """
+    domain_type = serializers.ChoiceField(choices=DOMAIN_TYPE_CHOICES, required=False)
+
+    """
+    additional info about the domain
+
+    """
+    domain_info = serializers.CharField(max_length=100, allow_blank=True, required=False)
+
+    """
     count of included email accounts
 
     """

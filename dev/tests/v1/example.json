@@ -276,6 +276,36 @@
             "campaign_goal": "Build the amazing e-Wall"
         }
     }, {
+        "easys_id": 9824565,
+        "easys_order_id": 84274,
+        "easys_account_location_id": 18736,
+        "rebate_percentage": 5,
+        "setup_fee": 0,
+        "start_fee": 0,
+        "budget": 0,
+        "fee": 3,
+        "one_time_budget": 0,
+        "commission": 40,
+        "deferred_payment_sum": 3000,
+        "deferred_payment_months": 36,
+        "comment": "The great wall website",
+        "start_date": "2019-04-01",
+        "end_date": "2025-03-31",
+        "product_type": 9,
+        "product_level": 2,
+        "initial_term_months": 6,
+        "detail_email": {
+            "desired_domain": "www.great-wall.us",
+            "domain_type": 1,
+            "domain_info": "The best domain you can get",
+            "additional_accounts": 0,
+            "addresses": [
+                "newemail@great-wall.us",
+                "newemail3@great-wall.us"
+            ],
+            "included_accounts": 1
+        }
+    }, {
         "easys_id": 9824566,
         "easys_order_id": 84274,
         "easys_account_location_id": 18736,
@@ -471,31 +501,6 @@
         "initial_term_months": 6,
         "detail_customer_website": {
             "url": "https://great-wall.us"
-        }
-    }, {
-        "easys_id": 918293,
-        "easys_order_id": 84274,
-        "easys_account_location_id": 18736,
-        "rebate_percentage": 0,
-        "setup_fee": 0,
-        "start_fee": 0,
-        "budget": 0,
-        "fee": 88.5,
-        "one_time_budget": 0,
-        "commission": 0,
-        "deferred_payment_sum": 0,
-        "deferred_payment_months": null,
-        "start_date": "2019-04-01",
-        "product_type": 9,
-        "product_level": null,
-        "initial_term_months": 6,
-        "detail_email": {
-            "included_accounts": 5,
-            "additional_accounts": 10,
-            "addresses": [
-                "donald@maga.org",
-                "mike@maga.org"
-            ]
         }
     }],
     "files": [{
