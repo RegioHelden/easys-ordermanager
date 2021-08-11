@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.38 (2021-08-11)
+* Fix example for email Orderline.
+
 # 1.4.37 (2021-08-11)
 Updates to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
