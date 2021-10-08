@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.39
+
+### v2
+
+#### `OrderLineDisplayPremiumSerializer`
+
+* Add new field `short_name`, optional.
+
 ## 1.4.37
 
 ### v1/v2
