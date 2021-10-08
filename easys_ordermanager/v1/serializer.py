@@ -1177,6 +1177,12 @@ class OrderLineDisplayPremiumSerializer(serializers.Serializer):
     - any of the display web/mobile fix/continuous subtypes
     """
 
+
+    """
+    short name given by the user
+    """
+    short_name = serializers.CharField(max_length=255, allow_blank=True, required=False)
+
     """
     campaign type, fixed runtime or continuous advertisement
     """
