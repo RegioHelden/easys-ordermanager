@@ -222,6 +222,7 @@
         "initial_term_months": 6,
         "payment_cycle": 12,
         "detail_display_premium": {
+            "short_name": "Flight Permium",
             "booking_type": 2,
             "target_devices": 1,
             "creatives_format": 6,
