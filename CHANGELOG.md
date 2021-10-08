@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.40 (2021-10-08)
+Fixes flake8 errors.
+
 # 1.4.39 (2021-10-08)
 Updates to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
