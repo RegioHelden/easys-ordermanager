@@ -1275,7 +1275,6 @@ class OrderLineDisplayPremiumSerializer(serializers.Serializer):
     - any of the display web/mobile fix/continuous subtypes
     """
 
-
     """
     short name given by the user
     """
