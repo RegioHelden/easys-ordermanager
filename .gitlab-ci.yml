@@ -1,0 +1,49 @@
+# This folder is cached between builds
+# http://docs.gitlab.com/ee/ci/yaml/README.html#cache
+cache:
+  paths:
+    - ~/.cache/pip/
+
+# This is a basic example for a gem or script which doesn't use
+# services such as redis or postgres
+.before-script-common: &before-script-common
+  - python -V  # Print out python version for debugging
+  - pip install -r requirements-test.txt
+  - pip install tox
+
+test:py37:
+  stage: test
+  image: "python:3.7"
+  before_script:
+    - *before-script-common
+  script:
+    - tox -e py37-django22
+    - flake8 easys_ordermanager
+
+test:py38:
+  stage: test
+  image: "python:3.8"
+  before_script:
+    - *before-script-common
+  script:
+    - tox -e py38-django22
+    - flake8 easys_ordermanager
+
+test:py39:
+  stage: test
+  image: "python:3.9"
+  before_script:
+    - *before-script-common
+  script:
+    - tox -e py39-django30
+    - flake8 easys_ordermanager
+
+publish:
+  stage: deploy
+  script:
+    - pip install -U twine build
+    - python -m build
+    - twine upload dist/*
+  only:
+    - tags
+  environment: pypi
