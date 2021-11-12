@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.41 (2021-11-12)
+* Add support for [django-phonenumber-field release series 6](https://github.com/stefanfoulis/django-phonenumber-field/blob/main/CHANGELOG.rst#600-2021-10-20)
+
 # 1.4.40 (2021-10-08)
 Fixes flake8 errors.
 
