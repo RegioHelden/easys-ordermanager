@@ -40,6 +40,7 @@ test:py39:
 
 publish:
   stage: deploy
+  image: python:latest
   script:
     - pip install -U twine build
     - python -m build
