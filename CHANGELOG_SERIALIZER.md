@@ -1,5 +1,14 @@
 # Serializer changes
 
+## 1.4.42
+
+### v1
+
+#### `OrderLineGoogleAdsPremiumSerializer`
+
+* Add field `branch_codes`, optional.
+
+
 ## 1.4.39
 
 ### v1/v2
