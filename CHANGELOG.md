@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.4.42 (2021-11-26)
+Updates to Serializer v1
+see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
+
 # 1.4.41 (2021-11-12)
 * Add support for [django-phonenumber-field release series 6](https://github.com/stefanfoulis/django-phonenumber-field/blob/main/CHANGELOG.rst#600-2021-10-20)
 

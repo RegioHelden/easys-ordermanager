@@ -1002,6 +1002,11 @@ class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
     keywords = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=True)
 
     """
+    customer preferred topics (branch_codes) from which the keywords will be used to build his campaigns
+    """
+    branch_codes = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=False)
+
+    """
     list of keywords that resulted in zero search volume on campaign calculation
     these keywords will not be guaranteed to be included in the campaign
     """
