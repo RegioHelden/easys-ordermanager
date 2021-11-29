@@ -99,7 +99,7 @@ PRODUCT_PAYMENT_CYCLE_CHOICES = Choices(
 
 PRODUCT_TYPE_ORDER_ATTRIBUTES_MAPPING = {
     PRODUCT_TYPE_GOOGLE_ADS: {'detail_google_ads_basic', 'detail_google_ads_premium'},
-    PRODUCT_TYPE_DISPLAY: {'detail_display_basic', 'detail_display_premium'},
+    PRODUCT_TYPE_DISPLAY: {'detail_display_premium'},
     PRODUCT_TYPE_FACEBOOK: {'detail_facebook'},
     PRODUCT_TYPE_IN_APP: {'detail_inapp'},
     PRODUCT_TYPE_LISTING: {'detail_listing'},
@@ -1149,126 +1149,6 @@ class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
         return data
 
 
-class OrderLineDisplayBasicSerializer(serializers.Serializer):
-    """
-    detailed specifications and briefing information for a display basic product - "display_web_continuous_rif" subtype
-    """
-
-    """
-    impressions per month, used by basic (20000/40000/80000/etc impressions) or continuous premium product
-
-        Please also provide field values for
-        products.product_type
-        order_line_online_details.banner_booking_type
-    """
-    impressions_per_month = serializers.ChoiceField(choices=DISPLAY_IMPRESSIONS_PER_MONTH_CHOICES,
-                                                    required=False, allow_null=True)
-
-    """
-    german zip codes used for geographical targeting
-    RH: must be converted to our geo targeting format
-
-    HC: the zip code together with geo_targeting_radius must be converted to our targeting json format
-    """
-    geo_targeting_zip = serializers.CharField(max_length=5, required=False, allow_blank=True)
-
-    """
-    what radius (km) around the geographical focus are described in geo_targeting should be targeted?
-    """
-    geo_targeting_radius = serializers.IntegerField(min_value=1, max_value=80, required=False)
-
-    """
-    what goals should be reached with the advertisement campaign?
-    e.g. get new customers, spread word about a product, etc.
-    """
-    campaign_goal = serializers.CharField(max_length=1000, allow_blank=True, required=False)
-
-    """
-    headline text that will be shown on the creative
-    """
-    headline = serializers.CharField(max_length=40, required=True)
-
-    """
-    sub-headline text that will be shown on the creative
-    """
-    sub_headline = serializers.CharField(max_length=40, required=True)
-
-    """
-    list of bullet point texts that will be shown on the creative
-    """
-    bullet_points = serializers.ListField(child=serializers.CharField(max_length=100), required=True)
-
-    """
-    call to action text that will be shown on the creative
-    """
-    call_to_action = serializers.CharField(max_length=18, required=True)
-
-    """
-    choice for the type of banner color selection: from website or color picker for e.g. color_code_1
-    """
-    banner_color_selection = serializers.ChoiceField(choices=DISPLAY_BANNER_COLOR_SELECTION_CHOICES,
-                                                     required=False, allow_blank=True)
-
-    """
-    color code to be used when designing the creative (priority 1)
-    """
-    color_code_1 = serializers.CharField(max_length=7, allow_blank=True, required=False)
-
-    """
-    color code to be used when designing the creative (priority 2)
-    """
-    color_code_2 = serializers.CharField(max_length=7, allow_blank=True, required=False)
-
-    """
-    color code to be used when designing the creative (priority 3)
-
-    """
-    color_code_3 = serializers.CharField(max_length=7, allow_blank=True, required=False)
-
-    """
-    choice for the source where the banner images should be used from: customer, website, rehiohelden
-    """
-    banner_image_selection = serializers.ChoiceField(choices=DISPLAY_BANNER_IMAGE_SOURCE_CHOICES, required=True)
-
-    """
-    chose which type of target page should be used in the ad? new or existing website
-    """
-    target_page_type = serializers.ChoiceField(choices=LANDING_PAGE_CHOICES, required=False)
-
-    """
-    url of the ads target website if CUSTOMER_WEBSITE is chosen in target_page_type
-    """
-    target_url = serializers.URLField(allow_blank=True, required=False)
-
-    """
-    creative template selected for basic product variant, will be ignored in premium and professional types
-    EASYS: order_line_online_details.banner_layout
-    """
-    package_template = serializers.IntegerField(allow_null=True, required=False)
-
-    """
-    what location should be added to the location framing of the creative?
-    only used in basic product variant
-
-    EASYS: order_line_online_details.banner_location_frame
-    """
-    location_frame_text = serializers.CharField(max_length=50, allow_blank=True, required=False)
-
-    """
-    will the customer provide creatives or do we have to create new ones?
-    if new ones must be created, chose which type
-
-    EASYS: order_line_online_details.banner_option
-    HC: ProductDisplay.premium_for_html5 (true if CREATIVE_OPTION_CREATE_ANIMATED, false otherwise)
-    """
-    creative_options = serializers.ChoiceField(choices=DISPLAY_BASIC_CREATIVE_OPTION_CHOICES, required=True)
-
-    def validate(self, data):
-        if data.get('geo_targeting') and not data.get('geo_targeting_radius'):
-            raise serializers.ValidationError('Geo targeting radius is mandatory')
-        return data
-
-
 class OrderLineDisplayPremiumSerializer(serializers.Serializer):
     """
     detailed specifications and briefing information for a display premium product
@@ -2209,12 +2089,6 @@ class OrderLineSerializer(serializers.Serializer):
     one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
     """
     detail_google_ads_premium = OrderLineGoogleAdsPremiumSerializer(required=False)
-
-    """
-    sub-serializer for display basic specific product data
-    one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
-    """
-    detail_display_basic = OrderLineDisplayBasicSerializer(required=False)
 
     """
     sub-serializer for display premium specific product data

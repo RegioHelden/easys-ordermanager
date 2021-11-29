@@ -170,41 +170,6 @@
             "target_audience": "Crazy stupid rednecks"
         }
     },{
-        "easys_id": 9824560,
-        "easys_order_id": 84274,
-        "easys_account_location_id": 18736,
-        "rebate_percentage": 5,
-        "budget": 1500,
-        "deferred_payment_sum": 0,
-        "deferred_payment_months": null,
-        "comment": "The great basic wall display",
-        "start_date": "2019-04-01",
-        "end_date": "2025-03-31",
-        "product_type": 2,
-        "product_level": 1,
-        "initial_term_months": 6,
-        "payment_cycle": 6,
-        "detail_display_basic": {
-            "impressions_per_month": 20000,
-            "geo_targeting_zip": "70178",
-            "geo_targeting_radius": 5,
-            "campaign_goal": "Make more stupid people pay for the Wall",
-            "headline": "Headlines",
-            "sub_headline": "sub headline",
-            "bullet_points": ["bullet pt 1", "bullet pt 2"],
-            "call_to_action": "call_to_action",
-            "banner_color_selection": 2,
-            "color_code_1": "#FF0000",
-            "color_code_2": "#FF0000",
-            "color_code_3": "#FF0000",
-            "banner_image_selection": 0,
-            "target_page_type": 1,
-            "target_url": "https://regiohelden.de",
-            "package_template": 0,
-            "location_frame_text": "location_frame_text",
-            "creative_options": 1
-        }
-    }, {
         "easys_id": 9824561,
         "easys_order_id": 84274,
         "easys_account_location_id": 18736,

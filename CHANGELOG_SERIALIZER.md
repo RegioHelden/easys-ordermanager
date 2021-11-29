@@ -1,5 +1,12 @@
 # Serializer changes
 
+## 1.4.43
+### v2
+
+* removed `detail_display_basic` from `OrderLineSerializer`
+* removed `OrderLineDisplayBasicSerializer`
+
+
 ## 1.4.42
 
 ### v1
