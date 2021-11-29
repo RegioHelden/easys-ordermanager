@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.4.43 (2021-11-29)
+Updates to Serializer v2
+see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
+
 # 1.4.42 (2021-11-26)
 Updates to Serializer v1
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
