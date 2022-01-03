@@ -910,51 +910,6 @@ class AccountLocationSerializer(serializers.Serializer):
         return data
 
 
-class OrderLineGoogleAdsBasicSerializer(serializers.Serializer):
-    """
-    detailed specifications and briefing information for a google ads basic product - "google_basic" product subtype
-    """
-
-    """
-    what goals should be reached with the advertisement campaign?
-    e.g. get new customers, spread word about a product, etc.
-    """
-    campaign_goal = serializers.CharField(max_length=200, allow_blank=True, required=False)
-
-    """
-    which cities/regions should the ad be targeted on?
-    """
-    regions = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=True)
-
-    """
-    the expected impression share when the campaign budget is initially calculated
-    """
-    expected_impression_share = serializers.DecimalField(
-        decimal_places=2, max_digits=5, allow_null=True, required=False)
-
-    """
-    the expected impressions when the campaign budget is initially calculated
-    """
-    expected_impressions = serializers.CharField(max_length=50, allow_blank=True, required=False)
-
-    """
-    customer preferred keywords to be found on with his campaign
-    """
-    keywords = serializers.ListField(child=serializers.CharField(max_length=100, required=True), required=True)
-
-    """
-    list of keywords that resulted in zero search volume on campaign calculation
-    these keywords will not be guaranteed to be included in the campaign
-    """
-    keywords_with_zero_search_volume = serializers.ListField(child=serializers.CharField(max_length=100, required=True),
-                                                             required=True)
-
-    """
-    definition of the target group this google ads campaign should be focused on
-    """
-    target_audience = serializers.CharField(max_length=1000, required=True)
-
-
 class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
     """
     detailed specifications and briefing information for a google ads premium product - "adwords" product subtype
@@ -2084,11 +2039,6 @@ class OrderLineSerializer(serializers.Serializer):
     payment_cycle = serializers.ChoiceField(choices=PRODUCT_PAYMENT_CYCLE_CHOICES, required=False)
 
     """
-    sub-serializer for google ads basic specific product data ("google_basic" product subtype)
-    one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
-    """
-    detail_google_ads_basic = OrderLineGoogleAdsBasicSerializer(required=False)
-    """
     sub-serializer for google ads premium specific product data
     one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
     """
@@ -2329,7 +2279,7 @@ class Serializer(serializers.Serializer):
 
     def validate_productdetail_exists(self, data):
         mapping = {
-            PRODUCT_TYPE_GOOGLE_ADS: {'detail_google_ads_basic', 'detail_google_ads_premium'},
+            PRODUCT_TYPE_GOOGLE_ADS: {'detail_google_ads_premium'},
             PRODUCT_TYPE_DISPLAY: {'detail_display_basic', 'detail_display_premium'},
             PRODUCT_TYPE_FACEBOOK: {'detail_facebook'},
             PRODUCT_TYPE_IN_APP: {'detail_inapp'},

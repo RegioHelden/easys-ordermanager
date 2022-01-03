@@ -1,5 +1,11 @@
 # Serializer changes
 
+## 1.4.44
+### v1/v2
+
+* removed `detail_google_ads_basic` from `OrderLineSerializer`
+* removed `OrderLineGoogleAdsBasicSerializer`
+
 ## 1.4.43
 ### v2
 
