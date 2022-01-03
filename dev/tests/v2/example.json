@@ -137,39 +137,7 @@
                 "Building area", "Construction"
             ]
         }
-    },{
-        "easys_id": 982931,
-        "easys_order_id": 84274,
-        "easys_account_location_id": 18736,
-        "rebate_percentage": 5,
-        "budget": 1500,
-        "commission": 40,
-        "deferred_payment_sum": 0,
-        "deferred_payment_months": null,
-        "comment": "Make basic people believe in my wall",
-        "start_date": "2019-04-01",
-        "end_date": "2025-03-31",
-        "product_type": 1,
-        "product_level": 1,
-        "initial_term_months": 6,
-        "payment_cycle": 3,
-        "detail_google_ads_basic": {
-            "campaign_goal": "Get approval for my wall",
-            "regions": [
-                "Texas", "New Mexico"
-            ],
-            "expected_impression_share": 80,
-            "expected_impressions": "Over 9000",
-            "has_quality_measures": true,
-            "keywords": [
-                "maga", "wall", "borderwall", "stupid"
-            ],
-            "keywords_with_zero_search_volume": [
-                "best president ever", "smart guy"
-            ],
-            "target_audience": "Crazy stupid rednecks"
-        }
-    },{
+    }, {
         "easys_id": 9824561,
         "easys_order_id": 84274,
         "easys_account_location_id": 18736,
