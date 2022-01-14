@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.45
+
+### v1/v2
+
+#### `OrderLineDisplayPremiumSerializer`
+
+* Changed field `age_targeting` choices: `DISPLAY_AGE_CHOICES`, removed legacy `[DISPLAY_AGE_14_19, DISPLAY_AGE_20_29]` and added `DISPLAY_AGE_14_29`
+
 ## 1.4.44
 ### v1/v2
 

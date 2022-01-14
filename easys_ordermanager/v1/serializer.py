@@ -353,16 +353,15 @@ DISPLAY_CREATIVES_FORMAT_CHOICES = Choices(
     ) % {'price': 399}),
 )
 
-DISPLAY_AGE_14_19 = 1
-DISPLAY_AGE_20_29 = 2
+DISPLAY_AGE_14_29 = 7
 DISPLAY_AGE_30_39 = 3
 DISPLAY_AGE_40_49 = 4
 DISPLAY_AGE_50_59 = 5
 DISPLAY_AGE_60_PLUS = 6
+
 DISPLAY_AGE_CHOICES = Choices(
-    (DISPLAY_AGE_20_29, '20_29', _('20-29 years')),
+    (DISPLAY_AGE_14_29, '14_29', _('14-29 years')),
     (DISPLAY_AGE_30_39, '30_39', _('30-39 years')),
-    (DISPLAY_AGE_14_19, '14_19', _('14-19 years')),
     (DISPLAY_AGE_40_49, '40_49', _('40-49 years')),
     (DISPLAY_AGE_50_59, '50_59', _('50-59 years')),
     (DISPLAY_AGE_60_PLUS, '60_plus', _('60 years or more')),
