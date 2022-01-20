@@ -368,14 +368,11 @@ msgstr ""
 "Dynamic Sitebar + Medium Rectangle Presenter (beinhaltet folgende "
 "Formate:301x601, 300x250) - %(price)d €"
 
-msgid "20-29 years"
-msgstr "20-29 Jahre"
+msgid "14-29 years"
+msgstr "14-29 Jahre"
 
 msgid "30-39 years"
 msgstr "30-39 Jahre"
-
-msgid "14-19 years"
-msgstr "14-19 Jahre"
 
 msgid "40-49 years"
 msgstr "40-49 Jahre"
@@ -574,9 +571,6 @@ msgstr "Boss@Home"
 
 msgid "Amateur chefs"
 msgstr "Hobbyköche"
-
-msgid "Misc"
-msgstr "Sonstiges"
 
 msgid "New landingpage"
 msgstr "Neue Landingpage"
