@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.4.46 (2022-01-25)
+* Add support for [djangorestframework 3.13 release series](https://www.django-rest-framework.org/community/release-notes/#313x-series)
+
 # 1.4.45 (2022-01-14)
 Updates to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
