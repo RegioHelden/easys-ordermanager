@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.47
+
+### v1/v2
+
+#### `OrderLineDisplayPremiumSerializer`
+
+* Changed field `impressions_per_day` to `impressions_one_time`.
+
 ## 1.4.45
 
 ### v1/v2

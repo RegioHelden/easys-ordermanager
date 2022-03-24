@@ -174,7 +174,7 @@
         "deferred_payment_months": null,
         "comment": "The great premium wall display",
         "start_date": "2019-04-01",
-        "end_date": "2025-03-31",
+        "end_date": null,
         "product_type": 2,
         "product_level": 2,
         "initial_term_months": 6,
@@ -184,7 +184,47 @@
             "target_devices": 1,
             "creatives_format": 6,
             "impressions_per_month": 10000,
-            "impressions_per_day": 0,
+            "impressions_one_time": null,
+            "age_targeting": [7, 3, 4, 5, 6],
+            "gender_targeting": 1,
+            "geo_targeting": [
+                "70178",
+                "73728"
+            ],
+            "channel_targeting": [
+                2, 3, 4, 5
+            ],
+            "interest_targeting": [
+                2, 3, 4, 5
+            ],
+            "campaign_goal": "Make more stupid people pay for the Wall",
+            "target_page_type": 1,
+            "target_url": "https://regiohelden.de",
+            "creative_options": 1
+        }
+    }, {
+        "easys_id": 9824562,
+        "easys_order_id": 84274,
+        "easys_account_location_id": 18736,
+        "rebate_percentage": 5,
+        "setup_fee": 100,
+        "budget": 1500,
+        "one_time_budget": 0,
+        "deferred_payment_sum": 0,
+        "deferred_payment_months": null,
+        "comment": "The great premium wall display",
+        "start_date": "2019-04-01",
+        "end_date": "2025-03-31",
+        "product_type": 2,
+        "product_level": 2,
+        "initial_term_months": 6,
+        "payment_cycle": 12,
+        "detail_display_premium": {
+            "booking_type": 1,
+            "target_devices": 1,
+            "creatives_format": 6,
+            "impressions_per_month": null,
+            "impressions_one_time": 10000,
             "age_targeting": [7, 3, 4, 5, 6],
             "gender_targeting": 1,
             "geo_targeting": [
