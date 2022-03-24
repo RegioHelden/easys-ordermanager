@@ -1119,9 +1119,9 @@ class OrderLineDisplayPremiumSerializer(serializers.Serializer):
     creatives_format = serializers.ChoiceField(choices=DISPLAY_CREATIVES_FORMAT_CHOICES, required=True)
 
     """
-    impressions per day, used for fixed runtime premium product
+    Total impressions of whole runtime, used for fixed runtime premium product
     """
-    impressions_per_day = serializers.IntegerField(allow_null=True, required=False)
+    impressions_one_time = serializers.IntegerField(allow_null=True, required=False)
 
     """
     impressions per month, used by basic (20000/40000/80000/etc impressions) or continuous premium product
