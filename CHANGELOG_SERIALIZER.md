@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.48
+
+### v1/v2
+
+#### `OrderLineDisplayPremiumSerializer`
+
+* Add validation for `impressions_per_month` and `impressions_one_time`, depending on `booking_type` (continuous or fixed).
+
 ## 1.4.47
 
 ### v1/v2
