@@ -1188,6 +1188,16 @@ class OrderLineDisplayPremiumSerializer(serializers.Serializer):
     """
     creative_options = serializers.ChoiceField(choices=CREATIVE_OPTION_CHOICES, required=True)
 
+    def validate(self, data):
+        if data.get('booking_type') == BOOKING_TYPE_FIXED and not data.get('impressions_one_time'):
+            raise serializers.ValidationError(
+                {'impressions_one_time': 'If booking type is fixed, impressions_one_time is required'})
+        if data.get('booking_type') == BOOKING_TYPE_CONTINUOUS and not data.get('impressions_per_month'):
+            raise serializers.ValidationError(
+                {'impressions_per_month': 'If booking type is continuous, impressions_per_month is required'})
+
+        return data
+
 
 class OrderLineFacebookDetailedTargetingSerializer(serializers.Serializer):
     """
