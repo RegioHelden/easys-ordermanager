@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.49
+
+### v1/v2
+
+#### `OrderLineSerializer`
+
+* Add `is_pre_briefing_necessary` field, default value is False.
+
 ## 1.4.48
 
 ### v1/v2
