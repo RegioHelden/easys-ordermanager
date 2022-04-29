@@ -1358,12 +1358,6 @@ class OrderLineInAppSerializer(serializers.Serializer):
     briefing = serializers.CharField(max_length=200, allow_blank=True, required=False)
 
     """
-    pre-briefing with customer-service necessary
-
-    """
-    is_pre_briefing_necessary = serializers.CharField(max_length=200, allow_blank=True, required=False)
-
-    """
     what goals should be reached with the advertisement campaign?
     e.g. get new customers, spread word about a product, etc.
 
