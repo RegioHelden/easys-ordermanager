@@ -2092,6 +2092,11 @@ class OrderLineSerializer(serializers.Serializer):
     """
     detail_email = OrderLineEmailSerializer(required=False)
 
+    """
+    pre-briefing with customer service necessary
+    """
+    is_pre_briefing_necessary = serializers.BooleanField(default=False)
+
 
 class SellerSerializer(serializers.Serializer):
     """
