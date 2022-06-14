@@ -574,6 +574,15 @@ INAPP_AUDIENCE_CHOICES = Choices(
 )
 
 
+class FileSerializer(serializers.Serializer):
+    """
+    proof of offer file, e.g. pdf with signature, file scan, etc
+
+    """
+    filename = serializers.CharField()
+    content = serializers.CharField()
+
+
 class AccountSerializer(serializers.Serializer):
     """
     represents a customer
@@ -1426,6 +1435,11 @@ class OrderLineInAppSerializer(serializers.Serializer):
     """
     ticket_id = serializers.CharField(max_length=20, required=True)
 
+    """
+    POI targeting file
+    """
+    poi_targeting_file = FileSerializer()
+
     def validate(self, data):
         if not data.get('target_audiences') and not data.get('other_target_audiences'):
             raise serializers.ValidationError('target_audiences or other_target_audiences has to be set')
@@ -2197,15 +2211,6 @@ class OrderSerializer(serializers.Serializer):
     multiple seller shares can be attached to a single order but their overall share must be exactly 100%
     """
     sellershares = SellerShareSerializer(many=True, required=True)
-
-
-class FileSerializer(serializers.Serializer):
-    """
-    proof of offer file, e.g. pdf with signature, file scan, etc
-
-    """
-    filename = serializers.CharField()
-    content = serializers.CharField()
 
 
 class Serializer(serializers.Serializer):
