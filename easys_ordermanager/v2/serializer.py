@@ -1438,7 +1438,7 @@ class OrderLineInAppSerializer(serializers.Serializer):
     """
     POI targeting file
     """
-    poi_targeting_file = FileSerializer()
+    poi_targeting_file = FileSerializer(required=False)
 
     def validate(self, data):
         if not data.get('target_audiences') and not data.get('other_target_audiences'):
