@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.50
+
+### v1/v2
+
+#### `OrderLineInAppSerializer`
+
+* Add `poi_targeting_file` field.
+
 ## 1.4.49
 
 ### v1/v2
