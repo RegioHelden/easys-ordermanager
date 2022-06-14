@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.51
+
+### v1/v2
+
+#### `OrderLineInAppSerializer`
+
+* Set `poi_targeting_file` as not required.
+
 ## 1.4.50
 
 ### v1/v2
