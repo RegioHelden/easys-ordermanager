@@ -71,6 +71,7 @@ PRODUCT_TYPE_EMAIL = 9
 PRODUCT_TYPE_CONVERSION_TRACKING = 10
 PRODUCT_TYPE_LANDINGPAGE = 11
 PRODUCT_TYPE_TONLINE = 12
+PRODUCT_TYPE_DISPLAY_NATIVE = 13
 PRODUCT_TYPE_CHOICES = Choices(
     (PRODUCT_TYPE_GOOGLE_ADS, 'google_ads', _('Google Ads')),
     (PRODUCT_TYPE_DISPLAY, 'display', _('Display')),
@@ -84,6 +85,7 @@ PRODUCT_TYPE_CHOICES = Choices(
     (PRODUCT_TYPE_EMAIL, 'email', _('Email')),
     (PRODUCT_TYPE_CONVERSION_TRACKING, 'conversion_tracking', _('Conversion tracking')),
     (PRODUCT_TYPE_TONLINE, 'tonline', _('T-Online')),
+    (PRODUCT_TYPE_DISPLAY_NATIVE, 'display_native', _('Display Native advertisement')),
 )
 
 PRODUCT_PAYMENT_CYCLE_1 = 1
@@ -571,6 +573,98 @@ INAPP_AUDIENCE_CHOICES = Choices(
     (INAPP_AUDIENCE_BEST_AGER, 'best_ager', _('Best ager')),
     (INAPP_AUDIENCE_BOSSHOME, 'bosshome', _('Boss@Home')),
     (INAPP_AUDIENCE_HOBBYKOCHE, 'hobbykoche', _('Amateur chefs')),
+)
+
+DISPLAY_NATIVE_AUTOMOTIVE = 1
+DISPLAY_NATIVE_EDUCATION = 2
+DISPLAY_NATIVE_BOOKS_AND_LITERATURE = 3
+DISPLAY_NATIVE_EAT_AND_DRINK = 4
+DISPLAY_NATIVE_FAMILY_AND_RELATIONSHIP = 5
+DISPLAY_NATIVE_TELEVISION = 6
+DISPLAY_NATIVE_FILMS = 7
+DISPLAY_NATIVE_BUSINESS_AND_FINANCE = 8
+DISPLAY_NATIVE_HEALTHY_LIFE = 9
+DISPLAY_NATIVE_PROPERTY = 10
+DISPLAY_NATIVE_HOUSE_AND_GARDEN = 11
+DISPLAY_NATIVE_ANIMALS = 12
+DISPLAY_NATIVE_HOBBIES_AND_INTERESTS = 13
+DISPLAY_NATIVE_CAREER = 14
+DISPLAY_NATIVE_ART = 15
+DISPLAY_NATIVE_MEDICAL_HEALTHMENT = 16
+DISPLAY_NATIVE_MUSIC_AND_AUDIO = 17
+DISPLAY_NATIVE_NEWS_AND_POLITICS = 18
+DISPLAY_NATIVE_PERSONAL_FINANCE = 19
+DISPLAY_NATIVE_POP_CULTURE = 20
+DISPLAY_NATIVE_TRAVEL = 21
+DISPLAY_NATIVE_RELIGION_AND_SPIRITUALITY = 22
+DISPLAY_NATIVE_SHOPPING = 23
+DISPLAY_NATIVE_SPORT = 24
+DISPLAY_NATIVE_STYLE_AND_FASHION = 25
+DISPLAY_NATIVE_TECHNOLOGY_AND_COMPUTER = 26
+DISPLAY_NATIVE_EVENTS_AND_ATTRACTIONS = 27
+DISPLAY_NATIVE_VIDEO_GAMES = 28
+DISPLAY_NATIVE_SCIENCE = 29
+DISPLAY_NATIVE_INTERESTS_TYPES = Choices(
+        (DISPLAY_NATIVE_AUTOMOTIVE, 'automotive', _('Automotive')),
+        (DISPLAY_NATIVE_EDUCATION, 'education', _('Education')),
+        (DISPLAY_NATIVE_BOOKS_AND_LITERATURE, 'books_and_literature', _('Books & Literature')),
+        (DISPLAY_NATIVE_EAT_AND_DRINK, 'eat_and_drink', _('Eat & Drink')),
+        (DISPLAY_NATIVE_FAMILY_AND_RELATIONSHIP, 'family_and_relationship', _('Family & Relationship')),
+        (DISPLAY_NATIVE_TELEVISION, 'television', _('Television')),
+        (DISPLAY_NATIVE_FILMS, 'films', _('Films')),
+        (DISPLAY_NATIVE_BUSINESS_AND_FINANCE, 'business_and_finance', _('Business & Finance')),
+        (DISPLAY_NATIVE_HEALTHY_LIFE, 'healthy_life', _('Healthy life')),
+        (DISPLAY_NATIVE_PROPERTY, 'property', _('Property')),
+        (DISPLAY_NATIVE_HOUSE_AND_GARDEN, 'house_and_garden', _('House & Garden')),
+        (DISPLAY_NATIVE_ANIMALS, 'animals', _('Animals')),
+        (DISPLAY_NATIVE_HOBBIES_AND_INTERESTS, 'hobbies_and_interests', _('Hobbies & Interests')),
+        (DISPLAY_NATIVE_CAREER, 'career', _('Career')),
+        (DISPLAY_NATIVE_ART, 'art', _('Art')),
+        (DISPLAY_NATIVE_MEDICAL_HEALTHMENT, 'medical_healthment', _('Medical healthment')),
+        (DISPLAY_NATIVE_MUSIC_AND_AUDIO, 'music_and_audio', _('Music & Audio')),
+        (DISPLAY_NATIVE_NEWS_AND_POLITICS, 'news_and_politics', _('News & Politics')),
+        (DISPLAY_NATIVE_PERSONAL_FINANCE, 'personal_finance', _('Personal finance')),
+        (DISPLAY_NATIVE_POP_CULTURE, 'pop_culture', _('Pop culture')),
+        (DISPLAY_NATIVE_TRAVEL, 'travel', _('Travel')),
+        (DISPLAY_NATIVE_RELIGION_AND_SPIRITUALITY, 'religion_and_spirituality', _('Religion & Spirituality')),
+        (DISPLAY_NATIVE_SHOPPING, 'shopping', _('Shopping')),
+        (DISPLAY_NATIVE_SPORT, 'sport', _('Sport')),
+        (DISPLAY_NATIVE_STYLE_AND_FASHION, 'style_and_fashion', _('Style & Fashion')),
+        (DISPLAY_NATIVE_TECHNOLOGY_AND_COMPUTER, 'technology_and_computer', _('Technology & Computer')),
+        (DISPLAY_NATIVE_EVENTS_AND_ATTRACTIONS, 'events_and_attractions', _('Events & Attractions')),
+        (DISPLAY_NATIVE_VIDEO_GAMES, 'video_games', _('Video games')),
+        (DISPLAY_NATIVE_SCIENCE, 'science', _('Science')),
+    )
+
+CPM = 1
+CPV = 2
+CPC = 3
+BILLING_TYPES = Choices(
+        (CPM, 'cpm', _('CPM')),
+        (CPV, 'cpv', _('CPV')),
+        (CPC, 'cpc', _('CPC')),
+    )
+
+REGIOHELDEN = 1
+CUSTOMER = 2
+CREATIVE_CREATORS = Choices(
+    (REGIOHELDEN, 'regiohelden', _('by RegioHelden')),
+    (CUSTOMER, 'customer', _('by customer')),
+)
+
+NATIVE_AD_IN = 1
+NATIVE_AD_OUT = 2
+NATIVE_AD_PROSPECT = 3
+NATIVE_AD_FLOW_AD_IN = 4
+NATIVE_AD_FLOW_AD_OUT = 5
+NATIVE_AD_FLOW_AD_PROSPECT = 6
+AD_TYPES = Choices(
+    (NATIVE_AD_IN, 'native_ad_in', _('AdIn')),
+    (NATIVE_AD_OUT, 'native_ad_out', _('AdOut')),
+    (NATIVE_AD_PROSPECT, 'native_ad_prospect', _('AdProspect')),
+    (NATIVE_AD_FLOW_AD_IN, 'native_ad_flow_ad_in', _('AdFlow (AdIn)')),
+    (NATIVE_AD_FLOW_AD_OUT, 'native_ad_flow_ad_out', _('AdFlow (AdOut)')),
+    (NATIVE_AD_FLOW_AD_PROSPECT, 'native_ad_flow_ad_prospect', _('AdFlow (AdProspect)')),
 )
 
 
@@ -1098,6 +1192,183 @@ class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 {'remarketing_budget': 'value > 0 must be provided when include_remarketing is true'}
             )
+        return data
+
+
+class DisplayNativeCreativeSerializer(serializers.Serializer):
+    '''
+    creative advertisement type
+    '''
+    ad_type = serializers.ChoiceField(choices=AD_TYPES, allow_blank=True, required=True)
+    '''
+    who will create teaser? - regiohelden or customer
+    '''
+    teaser = serializers.ChoiceField(choices=CREATIVE_CREATORS, allow_blank=True, required=True)
+    '''
+    who will create advertorial? - regiohelden or customer.
+    required for `native_ad_in` and `native_ad_flow_ad_in` ads types.
+    '''
+    advertorial = serializers.ChoiceField(choices=CREATIVE_CREATORS, allow_blank=True, required=False)
+    '''
+    customer wishes
+    '''
+    info_for_webdesign = serializers.CharField(max_length=1000, required=False)
+
+    def validate(self, data):
+        required_message = 'This field is required.'
+
+        ADVERTORIAL_REQUIRED_FOR = [AD_TYPES.native_ad_in, AD_TYPES.native_ad_flow_ad_in]
+
+        errors = []
+        if data.get('ad_type') in ADVERTORIAL_REQUIRED_FOR and not data.get('advertorial'):
+            errors.append({'advertorial': required_message})
+
+        if errors:
+            raise serializers.ValidationError(errors)
+
+        return data
+
+
+class OrderLineDisplayNativeSerializer(serializers.Serializer):
+    '''
+    billing model
+    '''
+    billing_type = serializers.ChoiceField(choices=BILLING_TYPES, required=True)
+
+    '''
+    unit can be impressions count, views or clicks, depends of billing type
+    '''
+    unit = serializers.IntegerField(min_value=0, required=True)
+
+    '''
+    unit proce
+    '''
+    unit_price = serializers.DecimalField(decimal_places=2, max_digits=10, required=True)
+
+    '''
+    Redmine ticket ID
+    '''
+    ticket_id = serializers.CharField(max_length=255, required=False)
+
+    '''
+    short name
+    '''
+    short_name = serializers.CharField(max_length=255, allow_blank=True, required=False)
+
+    '''
+    where should the native advertisement be linked?
+    required for `native_ad_out` and `native_ad_flow_ad_out` ads types
+    '''
+    target_url = serializers.URLField(max_length=400, allow_blank=True, required=False)
+
+    '''
+    list of german zip codes used for geographical targeting
+    RH: must be converted to our geo targeting format
+
+    HC: the zip code list must be converted to our targeting json format
+    '''
+    geo_targeting = serializers.ListField(
+        child=serializers.CharField(max_length=10, required=True), allow_empty=True, required=True
+    )
+
+    '''
+    german zip codes used for geographical targeting
+    RH: must be converted to our geo targeting format
+
+    HC: the zip code together with geo_targeting_radius must be converted to our targeting json format
+    '''
+    geo_targeting_zip = serializers.CharField(max_length=5, required=False, allow_blank=True)
+
+    '''
+    what radius (km) around the geographical focus are described in geo_targeting should be targeted?
+    '''
+    geo_targeting_radius = serializers.IntegerField(min_value=1, max_value=80, required=False)
+
+    '''
+    gender selection the ad should be targeted on
+    '''
+    gender = serializers.ChoiceField(choices=DISPLAY_GENDER_CHOICES, allow_blank=True, required=False)
+
+    '''
+    age (from) selection the ad should be targeted on
+    '''
+    age_group_from = serializers.IntegerField(min_value=0, allow_null=True, required=False)
+
+    '''
+    age (to) selection the ad should be targeted on
+    '''
+    age_group_to = serializers.IntegerField(min_value=0, allow_null=True, required=False)
+
+    '''
+    list of interests the ad will be targeted on
+    '''
+    interests = serializers.MultipleChoiceField(
+        choices=DISPLAY_NATIVE_INTERESTS_TYPES,
+        required=False,
+        allow_empty=True
+    )
+
+    '''
+    miscellaneous should be targeted on
+    '''
+    miscellaneous = serializers.CharField(allow_blank=True, required=False)
+
+    '''
+    creatives for this ads,
+    for now, it is one-to-one relation, but in future it can be adjusted to one-to-many relation
+    '''
+    creatives = DisplayNativeCreativeSerializer(allow_null=True, required=False)
+
+    def validate(self, data):
+        BILLING_TYPES_MAP = {
+            AD_TYPES.native_ad_in: [
+                BILLING_TYPES.cpm,
+                BILLING_TYPES.cpv,
+                BILLING_TYPES.cpc,
+            ],
+            AD_TYPES.native_ad_out: [
+                BILLING_TYPES.cpm,
+                BILLING_TYPES.cpc,
+            ],
+            AD_TYPES.native_ad_prospect: [
+                BILLING_TYPES.cpm,
+                BILLING_TYPES.cpc,
+            ],
+            AD_TYPES.native_ad_flow_ad_in: [BILLING_TYPES.cpm],
+            AD_TYPES.native_ad_flow_ad_out: [BILLING_TYPES.cpm],
+            AD_TYPES.native_ad_flow_ad_prospect: [BILLING_TYPES.cpm],
+        }
+        TARGET_URL_REQUIRED_FOR = [
+            AD_TYPES.native_ad_out,
+            AD_TYPES.native_ad_flow_ad_out,
+        ]
+
+        required_message = 'This field is required.'
+
+        errors = []
+        ad_type = data.get('creatives').get('ad_type')
+        billing_type = data.get('billing_type')
+        if billing_type and billing_type not in BILLING_TYPES_MAP[ad_type]:
+            errors.append({'billing_type': '"ad_type" and "billing_type" fields not match each other.'})
+
+        if ad_type in TARGET_URL_REQUIRED_FOR and not data.get('target_url'):
+            errors.append({'target_url': required_message})
+
+        age_group_from = data.get('age_group_from')
+        age_group_to = data.get('age_group_to')
+        if age_group_from:
+            if age_group_to:
+                if age_group_to < age_group_from:
+                    errors.append(
+                        {'age_group_from': '"age_group_from" should be greater or equal than "age_group_to".'})
+            else:
+                errors.append({'age_group_to': required_message})
+        elif age_group_to:
+            errors.append({'age_group_from': required_message})
+
+        if errors:
+            raise serializers.ValidationError(errors)
+
         return data
 
 
