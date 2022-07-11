@@ -1269,15 +1269,12 @@ class OrderLineDisplayNativeSerializer(serializers.Serializer):
 
         age_group_from = data.get('age_group_from')
         age_group_to = data.get('age_group_to')
-        if age_group_from:
-            if age_group_to:
-                if age_group_to < age_group_from:
-                    errors.append(
-                        {'age_group_from': '"age_group_from" should be greater or equal than "age_group_to".'})
-            else:
-                errors.append({'age_group_to': required_message})
-        elif age_group_to:
+        if age_group_from and not age_group_to:
+            errors.append({'age_group_to': required_message})
+        elif age_group_to and not age_group_from:
             errors.append({'age_group_from': required_message})
+        elif age_group_to < age_group_from:
+            errors.append({'age_group_from': '"age_group_from" should be greater or equal than "age_group_to".'})
 
         if errors:
             raise serializers.ValidationError(errors)
@@ -2386,6 +2383,12 @@ class OrderLineSerializer(serializers.Serializer):
     one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
     """
     detail_email = OrderLineEmailSerializer(required=False)
+
+    """
+    sub-serializer for display native specific product data
+    one detail dataset per order item, can be skipped if this detail is not meant for the item's product type
+    """
+    detail_display_native = OrderLineDisplayNativeSerializer(required=False)
 
     """
     pre-briefing with customer service necessary

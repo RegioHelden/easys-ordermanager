@@ -87,6 +87,9 @@ msgstr "Conversion-Tracking"
 msgid "T-Online"
 msgstr "T-Online"
 
+msgid "Display Native advertisement"
+msgstr "Ströer Native"
+
 msgid "Monthly"
 msgstr "Monatlich"
 
@@ -571,6 +574,120 @@ msgstr "Boss@Home"
 
 msgid "Amateur chefs"
 msgstr "Hobbyköche"
+
+msgid "Education"
+msgstr "Bildung"
+
+msgid "Books & Literature"
+msgstr "Bücher & Literatur"
+
+msgid "Eat & Drink"
+msgstr "Essen & Trinken"
+
+msgid "Family & Relationship"
+msgstr "Familie & Beziehungen"
+
+msgid "Television"
+msgstr "Fernsehen"
+
+msgid "Films"
+msgstr "Filme"
+
+msgid "Business & Finance"
+msgstr "Geschäft & Finanzen"
+
+msgid "Healthy life"
+msgstr "Gesundes Leben"
+
+msgid "Property"
+msgstr "Grundeigentum"
+
+msgid "House & Garden"
+msgstr "Haus & Garten"
+
+msgid "Animals"
+msgstr "Haustiere"
+
+msgid "Hobbies & Interests"
+msgstr "Hobbys & Interessen"
+
+msgid "Career"
+msgstr "Karriere"
+
+msgid "Art"
+msgstr "Kunst"
+
+msgid "Medical healthment"
+msgstr "Medizinische Gesundheit"
+
+msgid "Music & Audio"
+msgstr "Musik & Audio"
+
+msgid "News & Politics"
+msgstr "Nachrichten & Politik"
+
+msgid "Personal finance"
+msgstr "Persönliche Finanzen"
+
+msgid "Pop culture"
+msgstr "Popkultur"
+
+msgid "Religion & Spirituality"
+msgstr "Religion & Spiritualität"
+
+msgid "Shopping"
+msgstr "Shopping"
+
+msgid "Sport"
+msgstr "Sport"
+
+msgid "Style & Fashion"
+msgstr "Style & Fashion"
+
+msgid "Technology & Computer"
+msgstr "Technologie & Computer"
+
+msgid "Events & Attractions"
+msgstr "Veranstaltungen & Attraktionen"
+
+msgid "Video games"
+msgstr "Videospiele"
+
+msgid "Science"
+msgstr "Wissenschaft"
+
+msgid "CPM"
+msgstr "TKP"
+
+msgid "CPV"
+msgstr "CPV"
+
+msgid "CPC"
+msgstr "CPC"
+
+msgid "by RegioHelden"
+msgstr "durch RegioHelden"
+
+msgid "by customer"
+msgstr "durch Kunden"
+
+msgid "AdIn"
+msgstr "AdIn"
+
+msgid "AdOut"
+msgstr "AdOut"
+
+msgid "AdProspect"
+msgstr "AdProspect"
+
+msgid "AdFlow (AdIn)"
+msgstr "AdFlow (AdIn)"
+
+msgid "AdFlow (AdOut)"
+msgstr "AdFlow (AdOut)"
+
+msgid "AdFlow (AdProspect)"
+msgstr "AdFlow (AdProspect)"
 
 msgid "New landingpage"
 msgstr "Neue Landingpage"
