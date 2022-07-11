@@ -1134,10 +1134,10 @@ class DisplayNativeCreativeSerializer(serializers.Serializer):
     def validate(self, data):
         required_message = 'This field is required.'
 
-        ADVERTORIAL_REQUIRED_FOR = [AD_TYPES.native_ad_in, AD_TYPES.native_ad_flow_ad_in]
+        TYPES_WHICH_REQUIRE_ADVERTORIAL = [AD_TYPES.native_ad_in, AD_TYPES.native_ad_flow_ad_in]
 
         errors = []
-        if data.get('ad_type') in ADVERTORIAL_REQUIRED_FOR and not data.get('advertorial'):
+        if data.get('ad_type') in TYPES_WHICH_REQUIRE_ADVERTORIAL and not data.get('advertorial'):
             errors.append({'advertorial': required_message})
 
         if errors:
