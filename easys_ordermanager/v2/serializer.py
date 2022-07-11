@@ -1182,6 +1182,10 @@ class OrderLineGoogleAdsPremiumSerializer(serializers.Serializer):
     the topics related of the generic campaign
     """
     generic_topics = serializers.ListField(child=serializers.CharField(max_length=250), required=False)
+    """
+    zammad ticket id of the original google ads offer inquiry
+    """
+    ticket_id = serializers.CharField(max_length=20, required=False)
 
     def validate(self, data):
         if data.get('include_remarketing') and data.get('remarketing_setup_fee') is None:
@@ -1617,7 +1621,7 @@ class OrderLineFacebookSerializer(serializers.Serializer):
     special_events_campaign = serializers.CharField(max_length=250, allow_blank=True, required=False)
 
     """
-    redmine ticket id of the original facebook offer inquiry
+    ticket id of the original facebook offer inquiry
 
     """
     ticket_id = serializers.CharField(max_length=20, required=True)
@@ -1698,7 +1702,7 @@ class OrderLineInAppSerializer(serializers.Serializer):
     creatives_template = serializers.ChoiceField(choices=INAPP_BANNER_TEMPLATE_CHOICES, required=True)
 
     """
-    redmine ticket id of the original in app offer inquiry
+    ticket id of the original in app offer inquiry
 
     """
     ticket_id = serializers.CharField(max_length=20, required=True)
@@ -1925,7 +1929,7 @@ class OrderLineSeoSerializer(serializers.Serializer):
     wording_style = serializers.ChoiceField(choices=SEO_TEXT_STYLE_CHOICES, allow_null=True, required=False)
 
     """
-    redmine ticket id of the original seo offer inquiry
+    ticket id of the original seo offer inquiry
 
     """
     ticket_id = serializers.CharField(max_length=20, required=False)
