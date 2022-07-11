@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.52
+
+### v1/v2
+
+#### `OrderLineDisplayNativeSerializer`
+
+* Introduced new serializer - `OrderLineDisplayNativeSerializer`
+
 ## 1.4.51
 
 ### v1/v2
