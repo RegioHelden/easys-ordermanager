@@ -602,7 +602,7 @@ NATIVE_AD_PROSPECT = 3
 NATIVE_AD_FLOW_AD_IN = 4
 NATIVE_AD_FLOW_AD_OUT = 5
 NATIVE_AD_FLOW_AD_PROSPECT = 6
-AD_TYPES = Choices(
+NATIVE_AD_TYPES = Choices(
     (NATIVE_AD_IN, 'native_ad_in', _('AdIn')),
     (NATIVE_AD_OUT, 'native_ad_out', _('AdOut')),
     (NATIVE_AD_PROSPECT, 'native_ad_prospect', _('AdProspect')),
@@ -1116,7 +1116,7 @@ class DisplayNativeCreativeSerializer(serializers.Serializer):
     '''
     creative advertisement type
     '''
-    ad_type = serializers.ChoiceField(choices=AD_TYPES, allow_blank=True, required=True)
+    ad_type = serializers.ChoiceField(choices=NATIVE_AD_TYPES, allow_blank=True, required=True)
     '''
     who will create teaser? - regiohelden or customer
     '''
@@ -1134,7 +1134,7 @@ class DisplayNativeCreativeSerializer(serializers.Serializer):
     def validate(self, data):
         required_message = 'This field is required.'
 
-        TYPES_WHICH_REQUIRE_ADVERTORIAL = [AD_TYPES.native_ad_in, AD_TYPES.native_ad_flow_ad_in]
+        TYPES_WHICH_REQUIRE_ADVERTORIAL = [NATIVE_AD_TYPES.native_ad_in, NATIVE_AD_TYPES.native_ad_flow_ad_in]
 
         errors = []
         if data.get('ad_type') in TYPES_WHICH_REQUIRE_ADVERTORIAL and not data.get('advertorial'):
@@ -1234,26 +1234,26 @@ class OrderLineDisplayNativeSerializer(serializers.Serializer):
 
     def validate(self, data):
         BILLING_TYPES_MAP = {
-            AD_TYPES.native_ad_in: [
+            NATIVE_AD_TYPES.native_ad_in: [
                 BILLING_TYPES.cpm,
                 BILLING_TYPES.cpv,
                 BILLING_TYPES.cpc,
             ],
-            AD_TYPES.native_ad_out: [
+            NATIVE_AD_TYPES.native_ad_out: [
                 BILLING_TYPES.cpm,
                 BILLING_TYPES.cpc,
             ],
-            AD_TYPES.native_ad_prospect: [
+            NATIVE_AD_TYPES.native_ad_prospect: [
                 BILLING_TYPES.cpm,
                 BILLING_TYPES.cpc,
             ],
-            AD_TYPES.native_ad_flow_ad_in: [BILLING_TYPES.cpm],
-            AD_TYPES.native_ad_flow_ad_out: [BILLING_TYPES.cpm],
-            AD_TYPES.native_ad_flow_ad_prospect: [BILLING_TYPES.cpm],
+            NATIVE_AD_TYPES.native_ad_flow_ad_in: [BILLING_TYPES.cpm],
+            NATIVE_AD_TYPES.native_ad_flow_ad_out: [BILLING_TYPES.cpm],
+            NATIVE_AD_TYPES.native_ad_flow_ad_prospect: [BILLING_TYPES.cpm],
         }
         TARGET_URL_REQUIRED_FOR = [
-            AD_TYPES.native_ad_out,
-            AD_TYPES.native_ad_flow_ad_out,
+            NATIVE_AD_TYPES.native_ad_out,
+            NATIVE_AD_TYPES.native_ad_flow_ad_out,
         ]
 
         required_message = 'This field is required.'
