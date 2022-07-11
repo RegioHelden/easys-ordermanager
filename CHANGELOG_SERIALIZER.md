@@ -1,5 +1,13 @@
 # Serializer changes
 
+## 1.4.53
+
+### v1/v2
+
+#### `OrderLineGoogleAdsPremiumSerializer`
+
+* Add `ticket_id` field, not required.
+
 ## 1.4.52
 
 ### v1/v2
