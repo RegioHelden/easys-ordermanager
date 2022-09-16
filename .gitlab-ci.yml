@@ -4,38 +4,35 @@ cache:
   paths:
     - ~/.cache/pip/
 
-# This is a basic example for a gem or script which doesn't use
-# services such as redis or postgres
 .before-script-common: &before-script-common
   - python -V  # Print out python version for debugging
   - pip install -r requirements-test.txt
-  - pip install tox
 
-test:py37:
+test:
   stage: test
-  image: "python:3.7"
+  image: "python:$PYTHON"
   before_script:
     - *before-script-common
+    - pip install "django$DJANGO"
+  parallel:
+    matrix:
+      - PYTHON: "3.8"
+        DJANGO:
+          - ">=3.2,<4.0"
+          - ">=4.0,<4.1"
+          - ">=4.1,<4.2"
+      - PYTHON: "3.9"
+        DJANGO:
+          - ">=3.2,<4.0"
+          - ">=4.0,<4.1"
+          - ">=4.1,<4.2"
+      - PYTHON: "3.10"
+        DJANGO:
+          - ">=3.2,<4.0"
+          - ">=4.0,<4.1"
+          - ">=4.1,<4.2"
   script:
-    - tox -e py37-django22
-    - flake8 easys_ordermanager
-
-test:py38:
-  stage: test
-  image: "python:3.8"
-  before_script:
-    - *before-script-common
-  script:
-    - tox -e py38-django22
-    - flake8 easys_ordermanager
-
-test:py39:
-  stage: test
-  image: "python:3.9"
-  before_script:
-    - *before-script-common
-  script:
-    - tox -e py39-django30
+    - coverage run --source=easys_ordermanager manage.py test
     - flake8 easys_ordermanager
 
 publish:
