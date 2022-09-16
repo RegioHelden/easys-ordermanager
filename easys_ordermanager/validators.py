@@ -3,7 +3,6 @@ import re
 import idna
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.encoding import smart_text
 from django.utils.translation import gettext_lazy as _
 
 
@@ -45,7 +44,7 @@ class DomainNameValidator(RegexValidator):
 
             # convert it unicode -> ascii
             try:
-                asciival = idna.encode(smart_text(value)).decode()
+                asciival = idna.encode(value).decode()
             except UnicodeError:
                 # raise the original ASCII error
                 raise e

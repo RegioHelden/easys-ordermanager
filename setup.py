@@ -29,11 +29,11 @@ setup(
     long_description=long_description() + '\n\n' + changelog(),
     long_description_content_type='text/markdown',
     install_requires=[
-        'django>=2.2,<4.0',
+        'django>=3.2,<4.2',
         'django-countries>=6.0,<8.0',
         'django-internationalflavor>=0.4.0,<0.5.0',
         'django-model-utils>=3.1.2,<5.0.0',
-        'django-phonenumber-field>=3.0.1,<7.0',
+        'django-phonenumber-field>=3.0.1,<8.0',
         'djangorestframework>=3.10,<3.14',
         'phonenumbers>=7.0.6,<8.13.0',
     ],

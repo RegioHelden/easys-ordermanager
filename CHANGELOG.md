@@ -1,5 +1,13 @@
 # Changelog
 
+# 1.5 (unreleased)
+* Remove support for Python 3.7 and below
+* Remove support for Django 2.x and below
+* Add support for Python 3.10
+* Add support for Django 4.0 and 4.1
+* Change CI build to parallel matrix
+* Get rid of tox for CI
+
 # 1.4.53 (2022-07-13)
 Updates to Serializer v1 & v2
 see [serializer changelog](https://github.com/RegioHelden/easys-ordermanager/blob/master/CHANGELOG_SERIALIZER.md)
