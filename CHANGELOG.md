@@ -1,6 +1,6 @@
 # Changelog
 
-# 1.5 (unreleased)
+# 2.0 (2022-09-16)
 * Remove support for Python 3.7 and below
 * Remove support for Django 2.x and below
 * Drop support for DRF 3.10 and below
