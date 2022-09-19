@@ -1,12 +1,15 @@
 # Changelog
 
-# 1.5 (unreleased)
+# 2.0 (2022-09-16)
 * Remove support for Python 3.7 and below
 * Remove support for Django 2.x and below
+* Drop support for DRF 3.10 and below
 * Add support for Python 3.10
 * Add support for Django 4.0 and 4.1
+* Add tests for DRF 3.11, 3.12 and 3.13
 * Change CI build to parallel matrix
 * Get rid of tox for CI
+* Run the publish stage only for tags on the main branch
 
 # 1.4.53 (2022-07-13)
 Updates to Serializer v1 & v2

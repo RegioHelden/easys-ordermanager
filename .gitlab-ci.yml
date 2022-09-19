@@ -4,45 +4,50 @@ cache:
   paths:
     - ~/.cache/pip/
 
-.before-script-common: &before-script-common
-  - python -V  # Print out python version for debugging
-  - pip install -r requirements-test.txt
-
 test:
   stage: test
   image: "python:$PYTHON"
   before_script:
-    - *before-script-common
+    - python -V  # Print out python version for debugging
+    - pip install -r requirements-test.txt
     - pip install "django$DJANGO"
+    - pip install "djangorestframework$DRF"
   parallel:
     matrix:
-      - PYTHON: "3.8"
-        DJANGO:
-          - ">=3.2,<4.0"
-          - ">=4.0,<4.1"
-          - ">=4.1,<4.2"
-      - PYTHON: "3.9"
-        DJANGO:
-          - ">=3.2,<4.0"
-          - ">=4.0,<4.1"
-          - ">=4.1,<4.2"
-      - PYTHON: "3.10"
-        DJANGO:
-          - ">=3.2,<4.0"
-          - ">=4.0,<4.1"
-          - ">=4.1,<4.2"
+      - DJANGO: ">=3.2,<4.0"
+        PYTHON:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+        DRF:
+          - ">=3.11,<3.12"
+          - ">=3.12,<3.13"
+      - DJANGO: ">=4.0,<4.1"
+        PYTHON:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+        DRF:
+          - ">=3.13,<3.14"
+      - DJANGO: ">=4.1,<4.2"
+        PYTHON:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+        DRF:
+          - ">=3.13,<3.14"
   script:
     - coverage run --source=easys_ordermanager manage.py test
     - flake8 easys_ordermanager
 
 publish:
   stage: deploy
+  # job only runs for version (release) tags
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v\d+.\d+.\d+/'
   image: python:latest
   script:
     - pip install -U twine build
     - python -m build
     - twine upload dist/*
-  # job is only run against the main branch
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment: pypi

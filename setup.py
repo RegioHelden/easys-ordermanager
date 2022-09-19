@@ -34,7 +34,7 @@ setup(
         'django-internationalflavor>=0.4.0,<0.5.0',
         'django-model-utils>=3.1.2,<5.0.0',
         'django-phonenumber-field>=3.0.1,<8.0',
-        'djangorestframework>=3.10,<3.14',
+        'djangorestframework>=3.11,<3.14',
         'phonenumbers>=7.0.6,<8.13.0',
     ],
     license=easys_ordermanager.__license__,
