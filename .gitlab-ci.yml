@@ -49,16 +49,14 @@ tag_release:
         - "setup.cfg"
   script:
     - git diff --quiet -G"current_version = [0-9.]+" $CI_MERGE_REQUEST_DIFF_BASE_SHA..HEAD setup.cfg || export NEW_RELEASE=1
-    - export NEW_RELEASE=1
     - PKG_VERSION=$(python setup.py --version)
     - LATEST_TAG=$(git tag|sort -V|tail -1)
     - echo "Latest tag '${LATEST_TAG}', package version '${PKG_VERSION}', release required => ${NEW_RELEASE}"
     - >-
       if [ "$NEW_RELEASE" -eq "1" ] && [ "$PKG_VERSION" != "$LATEST_TAG" ]; then
-        set -x
         git config user.email "${GITLAB_USER_EMAIL}"
         git config user.name "${GITLAB_USER_NAME}"
-        git remote add tag-origin "${CI_SERVER_PROTOCOL}://oauth2:${PROJECT_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}"
+        git remote add tag-origin "${CI_SERVER_PROTOCOL}://oauth2:${PROJECT_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
         git tag -a "v${PKG_VERSION}" -m "Version created by GitLab CI build"
         git push tag-origin "v${PKG_VERSION}"
       fi
