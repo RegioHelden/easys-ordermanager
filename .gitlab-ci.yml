@@ -59,6 +59,8 @@ tag_release:
         git remote add tag-origin "${CI_SERVER_PROTOCOL}://oauth2:${PROJECT_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
         git tag -a "v${PKG_VERSION}" -m "Version created by GitLab CI build"
         git push tag-origin "v${PKG_VERSION}"
+      else
+        echo "No release tag to create"
       fi
 
 publish:
