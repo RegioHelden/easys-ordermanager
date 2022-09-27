@@ -3,4 +3,18 @@
 
 # EasyS order manager API
 
-Currently supported versions of Python, Django and DRF can be found in the GitLab CI build matrix.
+## Compatibility matrix
+
+Python 3.8, 3.9 and 3.10 
+
+### Django 3.2
+
+DRF 3.11 or newer
+
+### Django 4.0
+
+DRF 3.13 or newer
+
+### Django 4.1
+
+DRF 3.14 or newer

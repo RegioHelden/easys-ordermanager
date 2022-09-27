@@ -1,6 +1,10 @@
 # Changelog
 
-# 2.0 (2022-09-16)
+# 2.0.1 (2022-09-27)
+* Add support for DRF 3.14
+* Add more test combinations
+
+# 2.0.0 (2022-09-16)
 * Remove support for Python 3.7 and below
 * Remove support for Django 2.x and below
 * Drop support for DRF 3.10 and below
